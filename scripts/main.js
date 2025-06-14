@@ -385,3 +385,4 @@ document.addEventListener("DOMContentLoaded", function () {
 // Expor funções globalmente
 window.toggleMobileMenu = toggleMobileMenu;
 window.filterProducts = filterProducts;
+window.addEventListener("DOMContentLoaded", loadProducts);
