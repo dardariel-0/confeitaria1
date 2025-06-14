@@ -386,4 +386,6 @@ document.addEventListener("DOMContentLoaded", function () {
 window.toggleMobileMenu = toggleMobileMenu;
 window.filterProducts = filterProducts;
 window.addEventListener("DOMContentLoaded", loadProducts);
-window.addEventListener("DOMContentLoaded", loadAboutData);
+window.addEventListener("DOMContentLoaded", () => {
+  loadAboutData();
+});
