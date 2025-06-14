@@ -147,6 +147,131 @@
 }
 
 /* =================================
+   FOOTER
+   ================================= */
+
+.footer {
+  background: var(--purple-vibrant);
+  padding: 3rem 0;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+  font-weight: 600;
+  color: var(--candy-pink);
+  margin-bottom: 1rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-logo span {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--white);
+}
+
+.footer-text {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 32ch;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: var(--transition-normal);
+}
+
+.footer-nav a:hover {
+  color: var(--candy-pink);
+  transform: translateX(0.25rem);
+}
+
+.footer-contact {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-contact li {
+  color: white;
+  font-size: 1rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--candy-pink);
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.footer-bottom-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-bottom-text {
+  color: white;
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+.footer-heart {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-size: var(--font-size-sm);
+}
+
+.heart-emoji {
+  color: var(--candy-pink-vibrant);
+}
+
+@media (min-width: 640px) {
+  .footer-bottom-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 640px) {
+  .promotion-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
+
+/* =================================
    BOTÕES
    ================================= */
 
@@ -180,6 +305,7 @@
   );
   color: var(--white);
   box-shadow: var(--shadow-lg);
+  width: max-content;
 }
 
 .btn-primary:hover {
@@ -191,6 +317,7 @@
   border: 2px solid var(--candy-pink-vibrant);
   color: var(--candy-pink-vibrant);
   background: transparent;
+  width: max-content;
 }
 
 .btn-outline:hover {
@@ -296,6 +423,7 @@
   border: solid 2px white;
   color: white;
   font-size: 1rem;
+  width: max-content;
 }
 
 /* =================================
@@ -418,14 +546,6 @@
   transform: scale(1.1);
 }
 
-.product-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(194, 128, 255, 0.3), transparent);
-  opacity: 0;
-  transition: var(--transition-smooth);
-}
-
 .product-card:hover .product-overlay {
   opacity: 1;
 }
@@ -470,19 +590,18 @@
 
 .heart-icon {
   cursor: pointer;
-  color: var(--gray-400);
+  color: var(--candy-pink-vibrant);
   transition: var(--transition-normal);
   font-size: 1.25rem;
 }
 
 .heart-icon:hover {
-  color: var(--candy-pink-vibrant);
   transform: scale(1.25);
 }
 
 .product-title {
   font-weight: 600;
-  color: var(--gray-800);
+  color: var(--candy-purple-vibrant);
   margin-bottom: 0.75rem;
   transition: var(--transition-normal);
 }
@@ -535,14 +654,18 @@
 
 .section-header {
   text-align: center;
-  margin-bottom: var(--spacing-12);
+  margin-bottom: 32px;
 }
 
 .section-title {
   font-size: var(--font-size-4xl);
   font-weight: 700;
   color: var(--gray-800);
-  margin-bottom: var(--spacing-4);
+  margin-bottom: 2px;
+
+  & .alstoria {
+    font-size: 3rem;
+  }
 }
 
 .section-description {

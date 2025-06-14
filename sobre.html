@@ -1,436 +1,569 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre Nós - Doce Encanto</title>
-    <meta name="description" content="Conheça a história da Doce Encanto. Há mais de 15 anos criando momentos especiais através de doces artesanais únicos, feitos com amor e tradição.">
-    
+    <meta
+      name="description"
+      content="Conheça a história da Doce Encanto. Há mais de 15 anos criando momentos especiais através de doces artesanais únicos, feitos com amor e tradição."
+    />
+
     <!-- CSS Files -->
-    <link rel="stylesheet" href="styles/globals.css">
-    <link rel="stylesheet" href="styles/components.css">
-    <link rel="stylesheet" href="styles/sobre.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles/globals.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/sobre.css" />
+  </head>
+  <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <a href="index.html" class="logo">
-                    <div class="logo-icon">
-                        <svg class="icon" fill="white" viewBox="0 0 24 24">
-                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>
-                        </svg>
-                    </div>
-                    <span class="logo-text">Doce Encanto</span>
-                </a>
-
-                <div class="nav-menu">
-                    <a href="index.html" class="nav-button">
-                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                            <polyline points="9,22 9,12 15,12 15,22"/>
-                        </svg>
-                        Home
-                    </a>
-                    <a href="produtos.html" class="nav-button">
-                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
-                            <path d="M3 6h18"/>
-                            <path d="M16 10a4 4 0 0 1-8 0"/>
-                        </svg>
-                        Produtos
-                    </a>
-                    <a href="sobre.html" class="nav-button active">
-                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="m22 21-3-3m-5.5-2.5A4.5 4.5 0 1 1 21 8a4.5 4.5 0 0 1-7.5 7.5"/>
-                        </svg>
-                        Sobre Nós
-                    </a>
-                </div>
-
-                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-                    <svg class="icon" id="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="4" x2="20" y1="6" y2="6"/>
-                        <line x1="4" x2="20" y1="12" y2="12"/>
-                        <line x1="4" x2="20" y1="18" y2="18"/>
-                    </svg>
-                    <svg class="icon hidden" id="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M18 6 6 18"/>
-                        <path d="m6 6 12 12"/>
-                    </svg>
-                </button>
+      <div class="container">
+        <div class="nav-content">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <svg class="icon" fill="white" viewBox="0 0 24 24">
+                <path
+                  d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"
+                />
+              </svg>
             </div>
+            <span class="logo-text">Doce Encanto</span>
+          </a>
 
-            <div class="mobile-menu hidden" id="mobile-menu">
-                <div class="mobile-menu-content">
-                    <a href="index.html" class="nav-button-mobile">
-                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                            <polyline points="9,22 9,12 15,12 15,22"/>
-                        </svg>
-                        Home
-                    </a>
-                    <a href="produtos.html" class="nav-button-mobile">
-                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
-                            <path d="M3 6h18"/>
-                            <path d="M16 10a4 4 0 0 1-8 0"/>
-                        </svg>
-                        Produtos
-                    </a>
-                    <a href="sobre.html" class="nav-button-mobile active">
-                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="m22 21-3-3m-5.5-2.5A4.5 4.5 0 1 1 21 8a4.5 4.5 0 0 1-7.5 7.5"/>
-                        </svg>
-                        Sobre Nós
-                    </a>
-                </div>
-            </div>
+          <div class="nav-menu">
+            <a href="index.html" class="nav-button">
+              <svg
+                class="icon-sm"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9,22 9,12 15,12 15,22" />
+              </svg>
+              Home
+            </a>
+            <a href="produtos.html" class="nav-button">
+              <svg
+                class="icon-sm"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                <path d="M3 6h18" />
+                <path d="M16 10a4 4 0 0 1-8 0" />
+              </svg>
+              Produtos
+            </a>
+            <a href="sobre.html" class="nav-button active">
+              <svg
+                class="icon-sm"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path
+                  d="m22 21-3-3m-5.5-2.5A4.5 4.5 0 1 1 21 8a4.5 4.5 0 0 1-7.5 7.5"
+                />
+              </svg>
+              Sobre Nós
+            </a>
+          </div>
+
+          <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+            <svg
+              class="icon"
+              id="menu-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="4" x2="20" y1="6" y2="6" />
+              <line x1="4" x2="20" y1="12" y2="12" />
+              <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+            <svg
+              class="icon hidden"
+              id="close-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
         </div>
+
+        <div class="mobile-menu hidden" id="mobile-menu">
+          <div class="mobile-menu-content">
+            <a href="index.html" class="nav-button-mobile">
+              <svg
+                class="icon-sm"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9,22 9,12 15,12 15,22" />
+              </svg>
+              Home
+            </a>
+            <a href="produtos.html" class="nav-button-mobile">
+              <svg
+                class="icon-sm"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                <path d="M3 6h18" />
+                <path d="M16 10a4 4 0 0 1-8 0" />
+              </svg>
+              Produtos
+            </a>
+            <a href="sobre.html" class="nav-button-mobile active">
+              <svg
+                class="icon-sm"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path
+                  d="m22 21-3-3m-5.5-2.5A4.5 4.5 0 1 1 21 8a4.5 4.5 0 0 1-7.5 7.5"
+                />
+              </svg>
+              Sobre Nós
+            </a>
+          </div>
+        </div>
+      </div>
     </nav>
 
     <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
-        <section class="sobre-hero">
-            <div class="sobre-floating-1">
-                <svg class="icon" fill="white" viewBox="0 0 24 24">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>
+      <!-- Hero Section -->
+      <section class="sobre-hero">
+        <div class="sobre-floating-1">
+          <svg width="18" height="18" viewBox="0 0 11 10" fill="none">
+            <path
+              d="M5.86169 9.90602C5.80411 9.94499 5.7362 9.96582 5.66669 9.96582C5.59718 9.96582 5.52926 9.94499 5.47169 9.90602C4.54869 9.2892 0.666687 6.54426 0.666687 3.9544C0.666687 0.61265 4.59169 0.0773694 5.66669 2.32855C6.74169 0.0773694 10.6667 0.61265 10.6667 3.9544C10.6667 6.54476 6.78469 9.2892 5.86169 9.90502V9.90602Z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+        <div class="sobre-floating-2">
+          <svg width="18" height="18" viewBox="0 0 11 10" fill="none">
+            <path
+              d="M5.86169 9.90602C5.80411 9.94499 5.7362 9.96582 5.66669 9.96582C5.59718 9.96582 5.52926 9.94499 5.47169 9.90602C4.54869 9.2892 0.666687 6.54426 0.666687 3.9544C0.666687 0.61265 4.59169 0.0773694 5.66669 2.32855C6.74169 0.0773694 10.6667 0.61265 10.6667 3.9544C10.6667 6.54476 6.78469 9.2892 5.86169 9.90502V9.90602Z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+        <div class="sobre-floating-3">
+          <svg width="18" height="18" viewBox="0 0 11 10" fill="none">
+            <path
+              d="M5.86169 9.90602C5.80411 9.94499 5.7362 9.96582 5.66669 9.96582C5.59718 9.96582 5.52926 9.94499 5.47169 9.90602C4.54869 9.2892 0.666687 6.54426 0.666687 3.9544C0.666687 0.61265 4.59169 0.0773694 5.66669 2.32855C6.74169 0.0773694 10.6667 0.61265 10.6667 3.9544C10.6667 6.54476 6.78469 9.2892 5.86169 9.90502V9.90602Z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+
+        <div class="container">
+          <div class="sobre-hero-content">
+            <div class="sobre-hero-text">
+              <div class="section-badge">
+                <svg class="icon-sm" fill="white" viewBox="0 0 24 24">
+                  <path
+                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"
+                  />
                 </svg>
+                Nossa História
+              </div>
+
+              <h1 class="sobre-hero-title">
+                <span class="alstoria">Doce Encanto</span><br />
+                <span class="gradient-text-alt">Uma história de amor!</span>
+              </h1>
+
+              <p class="sobre-hero-description">
+                Há mais de 15 anos criamos momentos especiais através dos nossos
+                doces artesanais. Nossa paixão pela confeitaria começou na
+                cozinha de casa e hoje se transformou em uma das confeitarias
+                mais queridas da cidade.
+              </p>
             </div>
-            <div class="sobre-floating-2">
-                <svg class="icon" fill="white" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+
+            <div class="sobre-hero-image">
+              <img
+                src="/img/hero/aqui.jpg"
+                alt="Interior da confeitaria"
+                class="sobre-hero-img"
+              />
+              <div class="sobre-hero-decorative-1">
+                <svg width="18" height="18" viewBox="0 0 11 10" fill="none">
+                  <path
+                    d="M5.86169 9.90602C5.80411 9.94499 5.7362 9.96582 5.66669 9.96582C5.59718 9.96582 5.52926 9.94499 5.47169 9.90602C4.54869 9.2892 0.666687 6.54426 0.666687 3.9544C0.666687 0.61265 4.59169 0.0773694 5.66669 2.32855C6.74169 0.0773694 10.6667 0.61265 10.6667 3.9544C10.6667 6.54476 6.78469 9.2892 5.86169 9.90502V9.90602Z"
+                    fill="currentColor"
+                  />
                 </svg>
-            </div>
-            <div class="sobre-floating-3">
-                <svg class="icon" fill="white" viewBox="0 0 24 24">
-                    <path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/>
-                    <path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/>
-                    <path d="M2 21h20"/>
-                    <path d="M7 8v3"/>
-                    <path d="M12 8v3"/>
-                    <path d="M17 8v3"/>
+              </div>
+              <div class="sobre-hero-decorative-2">
+                <svg width="18" height="18" viewBox="0 0 11 10" fill="none">
+                  <path
+                    d="M5.86169 9.90602C5.80411 9.94499 5.7362 9.96582 5.66669 9.96582C5.59718 9.96582 5.52926 9.94499 5.47169 9.90602C4.54869 9.2892 0.666687 6.54426 0.666687 3.9544C0.666687 0.61265 4.59169 0.0773694 5.66669 2.32855C6.74169 0.0773694 10.6667 0.61265 10.6667 3.9544C10.6667 6.54476 6.78469 9.2892 5.86169 9.90502V9.90602Z"
+                    fill="currentColor"
+                  />
                 </svg>
+              </div>
             </div>
-            
-            <div class="container">
-                <div class="sobre-hero-content">
-                    <div class="sobre-hero-text">
-                        <div class="section-badge">
-                            <svg class="icon-sm" fill="white" viewBox="0 0 24 24">
-                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>
-                            </svg>
-                            Nossa História
-                        </div>
-                        
-                        <h1 class="sobre-hero-title">
-                            Doce Encanto<br>
-                            <span class="gradient-text-alt">Uma História de Amor</span>
-                        </h1>
-                        
-                        <p class="sobre-hero-description">
-                            Há mais de 15 anos criamos momentos especiais através dos nossos doces artesanais. 
-                            Nossa paixão pela confeitaria começou na cozinha de casa e hoje se transformou 
-                            em uma das confeitarias mais queridas da cidade.
-                        </p>
-                    </div>
-                    
-                    <div class="sobre-hero-image">
-                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=600&fit=crop" alt="Interior da confeitaria" class="sobre-hero-img">
-                        <div class="sobre-hero-decorative-1">
-                            <svg class="icon" fill="white" viewBox="0 0 24 24">
-                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>
-                            </svg>
-                        </div>
-                        <div class="sobre-hero-decorative-2">
-                            <svg class="icon" fill="white" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Story Section -->
-        <section class="story-section">
-            <div class="container">
-                <div class="story-wrapper">
-                    <div class="story-item">
-                        <div class="story-text">
-                            <div class="story-badge">
-                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-                                </svg>
-                                Nosso Início
-                            </div>
-                            <h2 class="story-title">Como Tudo Começou</h2>
-                            <p class="story-description">
-                                A história da Doce Encanto começou em 2008, quando Maria Elena decidiu 
-                                transformar sua paixão pela confeitaria em um negócio familiar.
-                            </p>
-                            <p class="story-description">
-                                Com receitas transmitidas por gerações e a constante busca pela 
-                                excelência, nossa confeitaria cresceu mantendo sempre os valores familiares.
-                            </p>
-                        </div>
-                        <div class="story-image">
-                            <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=500&h=400&fit=crop" 
-                                 alt="Primeira confeitaria" class="story-img">
-                            <div class="story-decoration story-decoration-1">
-                                <div class="story-info">
-                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <circle cx="12" cy="12" r="10"/>
-                                        <polyline points="12,6 12,12 16,14"/>
-                                    </svg>
-                                    <span>Desde 2008</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="story-item story-reverse">
-                        <div class="story-text">
-                            <div class="story-badge">
-                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                    <polyline points="9,22 9,12 15,12 15,22"/>
-                                </svg>
-                                Nosso Espaço
-                            </div>
-                            <h2 class="story-title">Nosso Ateliê</h2>
-                            <p class="story-description">
-                                Hoje, nossa confeitaria conta com um ateliê moderno e equipado, 
-                                onde cada doce é preparado com técnicas artesanais.
-                            </p>
-                            <p class="story-description">
-                                Mantemos a tradição das receitas familiares enquanto incorporamos 
-                                inovações e novas técnicas.
-                            </p>
-                        </div>
-                        <div class="story-image">
-                            <img src="https://images.unsplash.com/photo-1556909114-4f5b7e98b33c?w=500&h=400&fit=crop" 
-                                 alt="Ateliê de confeitaria" class="story-img">
-                            <div class="story-decoration story-decoration-2">
-                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                                    <circle cx="9" cy="7" r="4"/>
-                                    <path d="m22 21-3-3m-5.5-2.5A4.5 4.5 0 1 1 21 8a4.5 4.5 0 0 1-7.5 7.5"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
+      <!-- Story Section -->
+      <section class="story-section">
+        <div class="container">
+          <div class="story-wrapper">
+            <div class="story-item">
+              <div class="story-text">
+                <div class="story-badge">
+                  <svg
+                    class="icon-sm"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                  </svg>
+                  Nosso Início
                 </div>
+                <h2 class="story-title">Como tudo começou?</h2>
+                <p class="story-description">
+                  A história da Doce Encanto começou em 2008, quando Maria Elena
+                  decidiu transformar sua paixão pela confeitaria em um negócio
+                  familiar.
+                </p>
+                <p class="story-description">
+                  Com receitas transmitidas por gerações e a constante busca
+                  pela excelência, nossa confeitaria cresceu mantendo sempre os
+                  valores familiares.
+                </p>
+              </div>
+              <div class="story-image">
+                <img
+                  src="/img/hero/primeira.JPG"
+                  alt="Primeira confeitaria"
+                  class="story-img"
+                />
+                <div class="story-decoration story-decoration-1">
+                  <div class="story-info">
+                    <svg
+                      class="icon-sm"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12,6 12,12 16,14" />
+                    </svg>
+                    <span>Desde 2008</span>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
 
-        <!-- Values Section -->
-        <section class="values-section">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-badge">
-                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
-                        </svg>
-                        Nossos Valores
-                    </div>
-                    <h2 class="values-title">O que Nos Move</h2>
-                    <p class="values-description">Os princípios que guiam nosso trabalho</p>
+            <div class="story-item story-reverse">
+              <div class="story-text">
+                <div class="story-badge">
+                  <svg
+                    class="icon-sm"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9,22 9,12 15,12 15,22" />
+                  </svg>
+                  Nosso Espaço
                 </div>
-                
-                <div class="values-grid" id="values-grid">
-                    <!-- Valores serão carregados via JavaScript -->
-                </div>
+                <h2 class="story-title">Nosso Ateliê</h2>
+                <p class="story-description">
+                  Hoje, nossa confeitaria conta com um ateliê moderno e
+                  equipado, onde cada doce é preparado com técnicas artesanais.
+                </p>
+                <p class="story-description">
+                  Mantemos a tradição das receitas familiares enquanto
+                  incorporamos inovações e novas técnicas.
+                </p>
+              </div>
+              <div class="story-image">
+                <img
+                  src="/img/hero/atelie.JPG"
+                  alt="Ateliê de confeitaria"
+                  class="story-img"
+                />
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Mission Section -->
-        <section class="mission-section">
-            <div class="container">
-                <div class="mission-content">
-                    <div class="mission-badge">
-                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/>
-                            <circle cx="12" cy="12" r="6"/>
-                            <circle cx="12" cy="12" r="2"/>
-                        </svg>
-                        Nossa Missão
-                    </div>
-                    
-                    <h2 class="mission-title">Criando Momentos Especiais</h2>
-                    
-                    <p class="mission-description">
-                        Nossa missão é criar doces que não apenas satisfazem o paladar, mas também 
-                        despertam emoções e criam memórias afetivas.
-                    </p>
-                    
-                    <div class="mission-quote">
-                        <blockquote class="quote-text">
-                            "Nosso maior prazer é ver o sorriso das pessoas ao provarem nossos doces. 
-                            Cada receita carrega não apenas ingredientes, mas também amor, tradição e 
-                            a alegria de fazer parte dos momentos mais doces da vida de nossos clientes."
-                        </blockquote>
-                        <p class="quote-author">- Maria Elena, Fundadora</p>
-                    </div>
-                </div>
+      <!-- Values Section -->
+      <section class="values-section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">
+              <svg
+                class="icon-sm"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                />
+              </svg>
+              Nossos Valores
             </div>
-        </section>
+            <h2 class="values-title">O que nos move?</h2>
+            <p class="values-description">
+              Os princípios que guiam nosso trabalho
+            </p>
+          </div>
 
-        <!-- Team Section -->
-        <section class="team-section">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-badge">
-                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="m22 21-3-3m-5.5-2.5A4.5 4.5 0 1 1 21 8a4.5 4.5 0 0 1-7.5 7.5"/>
-                        </svg>
-                        Nossa Equipe
-                    </div>
-                    <h2 class="team-title">Talentos Doces</h2>
-                    <p class="team-description">Conheça os talentos por trás dos nossos doces</p>
-                </div>
-                
-                <div class="team-grid" id="team-grid">
-                    <!-- Equipe será carregada via JavaScript -->
-                </div>
-            </div>
-        </section>
+          <div class="values-grid" id="values-grid">
+            <!-- Valores serão carregados via JavaScript -->
+          </div>
+        </div>
+      </section>
 
-        <!-- Contact CTA -->
-        <section class="sobre-cta">
-            <div class="container">
-                <div class="sobre-cta-content">
-                    <h2 class="sobre-cta-title">Vamos Conversar?</h2>
-                    <p class="sobre-cta-description">
-                        Ficou com alguma dúvida ou quer conhecer mais sobre nossa história? 
-                        Adoraríamos conversar com você!
-                    </p>
-                    <div class="sobre-cta-items">
-                        <div class="sobre-cta-item">
-                            <div class="sobre-cta-icon">
-                                <svg class="icon" fill="white" viewBox="0 0 24 24">
-                                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>
-                                </svg>
-                            </div>
-                            <div class="sobre-cta-info">
-                                <p class="sobre-cta-label">Feito com amor</p>
-                                <p class="sobre-cta-value">desde 2008</p>
-                            </div>
-                        </div>
-                        <div class="sobre-cta-item">
-                            <div class="sobre-cta-icon">
-                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="m6 9 6 6 6-6"/>
-                                </svg>
-                            </div>
-                            <div class="sobre-cta-info">
-                                <p class="sobre-cta-label">Qualidade</p>
-                                <p class="sobre-cta-value">artesanal garantida</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <!-- Team Section -->
+      <section class="team-section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">
+              <svg
+                class="icon-sm"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path
+                  d="m22 21-3-3m-5.5-2.5A4.5 4.5 0 1 1 21 8a4.5 4.5 0 0 1-7.5 7.5"
+                />
+              </svg>
+              Nossa Equipe
             </div>
-        </section>
+            <h2 class="team-title">Talentos Doces</h2>
+            <p class="team-description">
+              Conheça os talentos por trás dos nossos doces
+            </p>
+          </div>
+
+          <div class="team-grid" id="team-grid">
+            <!-- Equipe será carregada via JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact CTA -->
+      <section class="sobre-cta">
+        <div class="container">
+          <div class="sobre-cta-content">
+            <h2 class="sobre-cta-title">Vamos Conversar?</h2>
+            <p class="sobre-cta-description">
+              Ficou com alguma dúvida ou quer conhecer mais sobre nossa
+              história? Adoraríamos conversar com você!
+            </p>
+            <div class="sobre-cta-items">
+              <a href="/">Fale conosco</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <div class="logo-icon">
-                            <svg class="icon" fill="white" viewBox="0 0 24 24">
-                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>
-                            </svg>
-                        </div>
-                        <span>Doce Encanto</span>
-                    </div>
-                    <p class="footer-text">Criando momentos especiais através de doces artesanais únicos, feitos com amor e ingredientes selecionados desde 2008.</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Navegação</h4>
-                    <ul class="footer-nav">
-                        <li><a href="index.html">
-                            <svg class="icon-sm" style="display: inline; margin-right: 0.5rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                <polyline points="9,22 9,12 15,12 15,22"/>
-                            </svg>
-                            Home
-                        </a></li>
-                        <li><a href="produtos.html">
-                            <svg class="icon-sm" style="display: inline; margin-right: 0.5rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/>
-                                <path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/>
-                                <path d="M2 21h20"/>
-                                <path d="M7 8v3"/>
-                                <path d="M12 8v3"/>
-                                <path d="M17 8v3"/>
-                            </svg>
-                            Produtos
-                        </a></li>
-                        <li><a href="sobre.html">
-                            <svg class="icon-sm" style="display: inline; margin-right: 0.5rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>
-                            </svg>
-                            Sobre Nós
-                        </a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Contato</h4>
-                    <ul class="footer-contact">
-                        <li>
-                            <svg class="icon-sm" style="display: inline; margin-right: 0.5rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            </svg>
-                            (11) 99999-9999
-                        </li>
-                        <li>
-                            <svg class="icon-sm" style="display: inline; margin-right: 0.5rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                <polyline points="22,6 12,13 2,6"/>
-                            </svg>
-                            contato@doceencanto.com.br
-                        </li>
-                        <li>
-                            <svg class="icon-sm" style="display: inline; margin-right: 0.5rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
-                                <circle cx="12" cy="10" r="3"/>
-                            </svg>
-                            Rua das Delícias, 123<br>&nbsp;&nbsp;&nbsp;&nbsp;São Paulo - SP
-                        </li>
-                    </ul>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <div class="logo-icon">
+                <svg class="icon" fill="white" viewBox="0 0 24 24">
+                  <path
+                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"
+                  />
+                </svg>
+              </div>
+              <span>Doce Encanto</span>
             </div>
-            
-            <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p class="footer-bottom-text">© 2024 Doce Encanto. Todos os direitos reservados.</p>
-                    <div class="footer-heart">
-                        <span>Feito com</span>
-                        <svg class="icon-sm" style="margin: 0 0.25rem;" fill="var(--candy-pink)" viewBox="0 0 24 24">
-                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>
-                        </svg>
-                        <span>para adoçar sua vida</span>
-                    </div>
-                </div>
-            </div>
+            <p class="footer-text">
+              Criando momentos especiais através de doces artesanais únicos,
+              feitos com amor e ingredientes selecionados desde 2008.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h4>Navegação</h4>
+            <ul class="footer-nav">
+              <li>
+                <a href="index.html">
+                  <svg
+                    class="icon-sm"
+                    style="display: inline; margin-right: 0.5rem"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9,22 9,12 15,12 15,22" />
+                  </svg>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="produtos.html">
+                  <svg
+                    class="icon-sm"
+                    style="display: inline; margin-right: 0.5rem"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8" />
+                    <path
+                      d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"
+                    />
+                    <path d="M2 21h20" />
+                    <path d="M7 8v3" />
+                    <path d="M12 8v3" />
+                    <path d="M17 8v3" />
+                  </svg>
+                  Produtos
+                </a>
+              </li>
+              <li>
+                <a href="sobre.html">
+                  <svg
+                    class="icon-sm"
+                    style="display: inline; margin-right: 0.5rem"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"
+                    />
+                  </svg>
+                  Sobre Nós
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <ul class="footer-contact">
+              <li>
+                <svg
+                  class="icon-sm"
+                  style="display: inline; margin-right: 0.5rem"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+                (11) 99999-9999
+              </li>
+              <li>
+                <svg
+                  class="icon-sm"
+                  style="display: inline; margin-right: 0.5rem"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                contato@doceencanto.com.br
+              </li>
+              <li>
+                <svg
+                  class="icon-sm"
+                  style="display: inline; margin-right: 0.5rem"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Rua das Delícias, 123<br />&nbsp;&nbsp;&nbsp;&nbsp;São Paulo -
+                SP
+              </li>
+            </ul>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          <div class="footer-bottom-content">
+            <p class="footer-bottom-text">
+              © 2024 Doce Encanto. Todos os direitos reservados.
+            </p>
+            <div class="footer-heart">
+              <span>Feito com</span>
+              <svg
+                class="icon-sm"
+                style="margin: 0 0.25rem"
+                fill="var(--candy-pink)"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"
+                />
+              </svg>
+              <span>para adoçar sua vida</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="scripts/main.js"></script>
-</body>
+  </body>
 </html>
